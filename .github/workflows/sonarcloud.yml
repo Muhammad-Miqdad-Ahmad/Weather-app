@@ -28,10 +28,11 @@ jobs:
           if [ -f package.json ]; then npm run build || true; fi
 
       - name: Run SonarCloud scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
         with:
           args: >
             -Dsonar.projectKey=Muhammad-Miqdad-Ahmad_Weather-app
             -Dsonar.organization=muhammad-miqdad-ahmad
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
