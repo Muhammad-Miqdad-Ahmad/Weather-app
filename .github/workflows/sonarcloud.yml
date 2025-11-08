@@ -32,5 +32,6 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=Muhammad-Miqdad-Ahmad_Weather-app
+            -Dsonar.organization=muhammad-miqdad-ahmad
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
